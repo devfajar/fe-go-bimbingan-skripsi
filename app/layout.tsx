@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Open_Sans } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "@/components/providers/theme-providers";
 
 const font = Open_Sans({ subsets: ["latin"] });
 
@@ -15,8 +16,36 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en">
-            <body className={font.className}>{children}</body>
+        <html lang="en" suppressHydrationWarning>
+            <body className={font.className}>
+              <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false} storageKey="discord-theme">
+                {children}
+              </ThemeProvider>
+              </body>
         </html>
     );
 }
+
+
+// "use client";
+
+// import React from 'react';
+// import Sidebar from '@/components/Sidebar';
+// import './globals.css';
+
+// export default function RootLayout({ children }: { children: React.ReactNode }) {
+//   return (
+//     <html lang="en">
+//       <head>
+//         {/* You can include meta tags, title, and other head elements here */}
+//         <title>My Discord Clone</title>
+//       </head>
+//       <body className="flex h-screen bg-gray-900 text-white">
+//         <Sidebar />
+//         <main className="flex-grow">
+//           {children}
+//         </main>
+//       </body>
+//     </html>
+//   );
+// }

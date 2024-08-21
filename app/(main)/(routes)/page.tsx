@@ -1,10 +1,22 @@
-import { Button } from "@/components/ui/button";
-import Image from "next/image";
+// import React from 'react';
+// import Content from '@/components/Content';
+
+import { ModeToggle } from "@/components/mode-toggle";
+
+// export default function Home() {
+//   return (
+//     <div>
+//       <Content />
+//     </div>
+//   );
+// }
 
 export default function Home() {
-    return (
-        <div>
-            This is Protected Route
-        </div>
-    );
+  return (
+    <div>
+      <p>Im Done</p>
+
+      <ModeToggle />
+    </div>
+  );
 }

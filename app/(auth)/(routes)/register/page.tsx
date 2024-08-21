@@ -3,12 +3,12 @@ import React from 'react';
 const RegisterPage: React.FC = () => {
   return (
     <div className="flex justify-center items-center h-screen bg-gray-900">
-      <div className="w-full max-w-md p-8 space-y-6 bg-gray-800 rounded-lg shadow-lg">
+      <div className="w-full max-w-md p-10 space-y-8 bg-gray-800 rounded-lg shadow-lg">
         <h2 className="text-3xl font-extrabold text-center text-white">Create an account</h2>
-        <form className="space-y-6">
-          <div className="rounded-md shadow-sm space-y-4">
+        <form className="space-y-6 mt-6">
+          <div className="space-y-5">
             <div>
-              <label htmlFor="username" className="block text-sm font-medium text-gray-300">
+              <label htmlFor="username" className="block text-sm font-medium text-gray-300 mb-1">
                 USERNAME <span className="text-red-500">*</span>
               </label>
               <input
@@ -22,7 +22,7 @@ const RegisterPage: React.FC = () => {
               />
             </div>
             <div>
-              <label htmlFor="email-address" className="block text-sm font-medium text-gray-300">
+              <label htmlFor="email-address" className="block text-sm font-medium text-gray-300 mb-1">
                 EMAIL <span className="text-red-500">*</span>
               </label>
               <input
@@ -36,7 +36,7 @@ const RegisterPage: React.FC = () => {
               />
             </div>
             <div>
-              <label htmlFor="password" className="block text-sm font-medium text-gray-300">
+              <label htmlFor="password" className="block text-sm font-medium text-gray-300 mb-1">
                 PASSWORD <span className="text-red-500">*</span>
               </label>
               <input
@@ -51,7 +51,7 @@ const RegisterPage: React.FC = () => {
             </div>
           </div>
 
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between mt-4">
             <div className="flex items-center">
               <input
                 id="terms"
@@ -65,7 +65,7 @@ const RegisterPage: React.FC = () => {
             </div>
           </div>
 
-          <div>
+          <div className="mt-8">
             <button
               type="submit"
               className="w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
@@ -75,7 +75,7 @@ const RegisterPage: React.FC = () => {
           </div>
         </form>
 
-        <div className="text-center text-sm text-gray-400">
+        <div className="text-center text-sm text-gray-400 mt-6">
           Already have an account?{' '}
           <a href="/login" className="font-medium text-indigo-500 hover:text-indigo-400">
             Log in
